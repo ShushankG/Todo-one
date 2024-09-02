@@ -9,8 +9,6 @@
 <body>
     <div id="app">
     </div>
-    <router-view></router-view>
-
     @vite('resources/js/app.js')
 </body>
 </html>

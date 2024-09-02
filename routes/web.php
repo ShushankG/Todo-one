@@ -14,13 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+Route::get('{any}', function () {
     return view('welcome');
-});
+})->where('any', '.*');
 
-Route::get('/task-list',[TaskController::class, 'taskList']);
-Route::post('/add-task',[TaskController::class, 'addTask']);
-Route::post('/toggle-status',[TaskController::class, 'statusToggle']);
-Route::post('/delete-task',[TaskController::class, 'DeleteTask']);
-Route::post('/fetch-task',[TaskController::class, 'fetchTask']);
-Route::post('/update-task',[TaskController::class, 'updateTask']);

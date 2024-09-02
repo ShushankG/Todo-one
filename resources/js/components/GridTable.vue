@@ -84,6 +84,10 @@ export default {
     async getAllTask(){
       const baseURL = import.meta.env.VITE_API_BASE_URL;
 
+      // const baseURL = import.meta.env.VITE_API_BASE_URL;
+const endpoint = `${baseURL}task-list`;
+console.log('Fetching from:', endpoint);
+
         await axios.get(`${baseURL}task-list`)
         .then((response)=>{
           this.TaskData= response.data;

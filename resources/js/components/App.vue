@@ -1,28 +1,15 @@
 <template>
-    <div>
-        <navi></navi>
+    <div id="app">
+      <router-view></router-view> <!-- This will render the Login or Todo component based on the route -->
     </div>
-    <div>
-        <grid-table></grid-table>
-    </div>
-</template>
-<script>
-import Navi from './navi.vue';
-import GridTable from './GridTable.vue';
-
-export default{
-    components:{
-        Navi,
-        GridTable
-    },
-    data(){
-        return{
-
-        }
-    },
-    methods:{
-        
-    }
-}
-
-</script>
+  </template>
+  
+  <script>
+  export default {
+    name: 'App'
+  };
+  </script>
+  
+  <style>
+  </style>
+  
